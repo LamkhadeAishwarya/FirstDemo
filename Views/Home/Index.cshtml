@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h3>
+    @ViewData["message"]
+</h3>
+<h4>
+    @TempData["company"]
+</h4>
+@if(ViewData["list"]!=null)
+{
+    <ol>
+    @foreach (string str in (IEnumerable<string>)ViewData["list"])
+    {
+     
+        <li>
+           @str
+        </li>
+    }
+    </ol>
+}
+<h4>@ViewData["msg"]</h4>
+
+@if(ViewData["list1"]!=null)
+{
+    <ol>
+    @foreach (string s1 in (IEnumerable<string>)ViewData["list1"])
+    {
+     
+        <li>
+            @s1
+        </li>
+    }
+    </ol>
+}
+<ol>
+    <p>@ViewBag.year</p>
+
+@foreach (string s1 in ViewBag.Names)
+{
+
+    <li li>
+        @s1
+    </li>
+}
+</ol>
+<ol>
+
+    @foreach (string s1 in ViewBag.City)
+    {
+
+        <li li>
+            @s1
+        </li>
+    }
+</ol>
+
+<h4>@ViewData["Message3"]</h4>
+ @if (ViewData["Color"] != null)
+    {
+        <ol>
+        @foreach (string s2 in (IEnumerable<string>)ViewData["Color"])
+        {
+         
+            <li>@s2</li>
+
+        }
+        </ol>
+    }
+
+ 
